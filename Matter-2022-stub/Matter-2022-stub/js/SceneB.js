@@ -1,0 +1,2 @@
+class SceneB extends BaseScene {
+}

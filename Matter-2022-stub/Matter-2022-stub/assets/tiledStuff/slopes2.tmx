@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="8" height="24" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="7">
+ <editorsettings>
+  <export target="slopes2.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="kenney-tileset" tilewidth="64" tileheight="64" spacing="2" margin="1" tilecount="374" columns="22">
+  <image source="../tiles/kenney-tileset-64px-extruded.png" width="1452" height="1122"/>
+  <tile id="1">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="64">
+     <polygon points="0,0 0,-48 16,-64 64,-64 64,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0">
+     <polygon points="0,0 48,0 64,16 64,64 0,64"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="16">
+     <polygon points="0,0 16,-16 48,-16 64,0 64,48 0,48 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="64">
+     <polygon points="0,0 64,-64 64,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0">
+     <polygon points="0,0 64,64 0,64 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0">
+     <polygon points="0,0 0,32 32,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="32" y="0">
+     <polygon points="0,0 32,32 32,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="69">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="71">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="72">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="73">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="74">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="64">
+     <polygon points="0,0 64,-64 64,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0">
+     <polygon points="0,0 64,64 0,64"/>
+    </object>
+    <object id="2" x="0" y="0">
+     <polygon points="0,0 64,64 0,64"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="91">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="94">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="95">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="111">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0">
+     <polygon points="0,0 0,32 32,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="112">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="64" y="0">
+     <polygon points="0,0 -32,0 0,32"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="113">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="114">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="115">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="116">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="117">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="118">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="279">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+    <property name="isDeadly" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="2" x="10" y="40" width="42" height="20"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer id="1" name="background" width="8" height="24">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,
+1,1,23,1,1,1,1,1,
+1,1,23,1,1,1,1,1,
+1,1,45,45,45,45,1,1,
+1,1,1,23,45,1,1,1,
+1,1,1,1,1,45,45,1,
+1,1,1,1,1,45,1,1,
+1,1,1,1,1,1,1,23,
+1,1,1,1,1,1,23,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,45,23,1,1,
+1,45,1,45,45,1,1,1,
+1,23,45,1,1,1,1,1,
+1,1,1,23,1,1,1,1,
+1,1,1,23,45,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,45,1,
+1,1,1,1,1,1,23,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,45,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer id="2" name="platforms" width="8" height="24">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+2,3,25,0,0,0,0,0,
+0,0,47,25,0,0,0,0,
+0,0,0,47,25,0,0,0,
+0,0,0,0,47,0,0,0,
+0,0,0,0,0,0,0,24,
+0,0,0,0,0,0,24,46,
+0,0,0,0,0,24,46,0,
+0,0,0,0,24,46,0,0,
+0,25,0,0,46,0,0,0,
+0,47,25,0,0,0,0,0,
+0,0,47,25,0,0,0,0,
+280,280,280,47,25,0,0,0,
+3,3,3,3,47,0,0,0,
+0,0,0,0,0,0,0,24,
+0,0,0,0,0,0,24,46,
+0,0,0,0,0,24,46,0,
+0,0,0,0,24,46,0,0,
+2,3,3,3,46,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="foreground" width="8" height="24" visible="0">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,278,0,0,0,0,0,0,
+166,300,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+166,143,165,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+165,144,143,164,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="4" name="objectLayer">
+  <object id="1" name="Emoji Spawn" type="emojiSpawn" x="416" y="32">
+   <point/>
+  </object>
+  <object id="2" name="player" type="playerSpawn" x="96" y="1408">
+   <point/>
+  </object>
+  <object id="3" type="exitRect" x="64" y="217" width="64" height="103"/>
+  <object id="5" name="emojiEnd" type="emojiDeathRect" x="0" y="1153" width="1" height="316"/>
+ </objectgroup>
+</map>

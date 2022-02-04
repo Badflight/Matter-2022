@@ -6,11 +6,11 @@ class BaseScene extends Phaser.Scene {
   /**@type {Player} */
   player
   /**@type {number} */
-  emojiMax = 1
+  emojiMax = 10
   /**@type {number} */
   emojiCount
   /** @type {number} */
-  emojiInterval = 1000
+  emojiInterval = 5000
   //@ts-ignore
   matterCollision
   constructor(id) {
@@ -49,6 +49,17 @@ class BaseScene extends Phaser.Scene {
     const objectLayer = map.getObjectLayer('objectLayer')
     let emojiDeathSensor
     let doorSensor
+    let emojiStack=this.matter.add.imageStack('emoji',0,200,400,5,1,0,0,{
+      ignoreGravity:true,
+      //isStatic:true
+    })
+    let rectangleTest
+    rectangleTest = this.matter.add.rectangle(100,100,100,100,{
+      isStatic:true,
+    })
+    console.log(rectangleTest)
+    
+    
     objectLayer.objects.forEach(function (object) {
       //get correct format objects
       let obj = Utils.RetrieveCustomProperties(object)
@@ -109,7 +120,7 @@ class BaseScene extends Phaser.Scene {
           this.cameras.main.fade(250,0,0,0)
           this.cameras.main.once('camerafadeoutcomplete', function(){
             this.scene.restart()
-          })
+          },this)
         }
       },
       context: this
@@ -134,6 +145,7 @@ class BaseScene extends Phaser.Scene {
       //@ts-ignore
       shape: 'circle'
     }).setScale(0.5)
+    //this.physics.add.collider()
     this.emojiCount++
 
   }

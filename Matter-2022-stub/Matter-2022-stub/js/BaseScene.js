@@ -5,6 +5,8 @@ class BaseScene extends Phaser.Scene {
   tileDataSource
   /**@type {Player} */
   player
+  /**@type {Phaser.GameObjects} */
+  rectangleTest
   /**@type {number} */
   emojiMax = 10
   /**@type {number} */
@@ -65,9 +67,15 @@ class BaseScene extends Phaser.Scene {
     //   shape:'circle'
     // })
     
-    // let rectangleTest = this.add.rectangle(100,100,100,100, 0xFF0000)
-    // this.matter.add.gameObject(rectangleTest)
-    //console.log(rectangleTest)
+    let rectangleTest = this.add.rectangle(100,100,100,100, 0xFF0000)
+    this.matter.add.gameObject(rectangleTest,{
+      //isStatic:true,
+      ignoreGravity:true,
+    })
+    //@ts-ignore
+    rectangleTest.setVelocity(6,0)
+
+    console.log(rectangleTest)
     
     
     objectLayer.objects.forEach(function (object) {
@@ -101,7 +109,7 @@ class BaseScene extends Phaser.Scene {
           ignoreGravity:true,
           //@ts-ignore
         })
-        console.log(objectStack)
+        //console.log(objectStack)
       }
     }, this)
     this.time.addEvent({
@@ -151,6 +159,7 @@ class BaseScene extends Phaser.Scene {
   }
   update(time, delta) {
     this.player.update()
+    //rectangleTest.setVelocity(6,0)
   }
   makeEmoji() {
     if (this.emojiCount >= this.emojiMax) {

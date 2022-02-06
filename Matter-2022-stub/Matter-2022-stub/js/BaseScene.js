@@ -36,6 +36,7 @@ class BaseScene extends Phaser.Scene {
       frameWidth: 74,
       frameHeight: 74
     })
+    this.load.image("box","assets/sprites/block.png")
   }
   create() {
     this.emojiCount = 0
@@ -49,15 +50,24 @@ class BaseScene extends Phaser.Scene {
     const objectLayer = map.getObjectLayer('objectLayer')
     let emojiDeathSensor
     let doorSensor
-    let emojiStack=this.matter.add.imageStack('emoji',0,200,400,5,1,0,0,{
-      ignoreGravity:true,
-      //isStatic:true
-    })
-    let rectangleTest
-    rectangleTest = this.matter.add.rectangle(100,100,100,100,{
-      isStatic:true,
-    })
-    console.log(rectangleTest)
+    let objectStack
+    // objectStack=this.matter.add.imageStack('box',1,406,300,1,3,0,0,{
+    //   //restitution:1,
+    //   density:0.0015,
+    //   ignoreGravity:true,
+    //   //@ts-ignore
+    // })
+    console.log(objectStack)
+    // let objectStack=this.matter.add.imageStack('emoji',0,200,400,5,1,0,0,{
+    //   ignoreGravity:true,
+    //   //isStatic:true,
+    //   //@ts-ignore
+    //   shape:'circle'
+    // })
+    
+    // let rectangleTest = this.add.rectangle(100,100,100,100, 0xFF0000)
+    // this.matter.add.gameObject(rectangleTest)
+    //console.log(rectangleTest)
     
     
     objectLayer.objects.forEach(function (object) {
@@ -82,6 +92,16 @@ class BaseScene extends Phaser.Scene {
       else if (obj.type === "exitRect") {
         //@ts-ignore
         doorSensor = this.matter.add.rectangle(obj.x + obj.width / 2, obj.y + obj.height / 2, obj.width, obj.height, { isStatic: true, isSensor: true })
+      }
+      else if(obj.type === "stackSpawn"){
+        //@ts-ignore
+        objectStack=this.matter.add.imageStack('box',1,obj.x,obj.y,1,3,0,0,{
+          //restitution:1,
+          density:0.0015,
+          ignoreGravity:true,
+          //@ts-ignore
+        })
+        console.log(objectStack)
       }
     }, this)
     this.time.addEvent({

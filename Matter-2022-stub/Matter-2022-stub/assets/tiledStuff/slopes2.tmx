@@ -314,6 +314,16 @@
     </object>
    </objectgroup>
   </tile>
+  <tile id="289">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+    <property name="isDeadly" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="64" height="64"/>
+    <object id="2" x="-36" y="-21"/>
+   </objectgroup>
+  </tile>
  </tileset>
  <layer id="1" name="background" width="8" height="24" locked="1">
   <data encoding="csv">

@@ -3,7 +3,7 @@ class SceneTest extends BaseScene {
       static sceneID ="sceneTest"
       constructor(constructor){
       super(SceneTest.sceneID)
-      this.tileDataKey = "landscapeTest"
+      this.tileDataKey = "landscpaeTest"
       this.tileDataSource = "assets/tiledStuff/landScapeTest.json"
       }
 }

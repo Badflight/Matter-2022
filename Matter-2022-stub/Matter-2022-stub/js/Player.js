@@ -57,7 +57,7 @@ class Player {
     const dy = this.touchData.endY - this.touchData.startY
     console.log(dx,dy)
     this.touchData.startX = this.touchData.startY = this.touchData.endX = this.touchData.endY = 0
-    const tolerance = 5
+    const tolerance = 20
     if (dx > tolerance) {
       this.moveRight = true
     }

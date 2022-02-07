@@ -53,13 +53,13 @@ class BaseScene extends Phaser.Scene {
     let emojiDeathSensor
     let doorSensor
     let objectStack
+    let boxPile
     // objectStack=this.matter.add.imageStack('box',1,406,300,1,3,0,0,{
     //   //restitution:1,
     //   density:0.0015,
     //   ignoreGravity:true,
     //   //@ts-ignore
     // })
-    console.log(objectStack)
     // let objectStack=this.matter.add.imageStack('emoji',0,200,400,5,1,0,0,{
     //   ignoreGravity:true,
     //   //isStatic:true,
@@ -67,15 +67,26 @@ class BaseScene extends Phaser.Scene {
     //   shape:'circle'
     // })
     
-    let rectangleTest = this.add.rectangle(100,100,100,100, 0xFF0000)
-    this.matter.add.gameObject(rectangleTest,{
-      //isStatic:true,
-      ignoreGravity:true,
-    })
-    //@ts-ignore
-    rectangleTest.setVelocity(6,0)
+    let rectangleTest
+    //  = this.add.rectangle(400,300,400,50, 0xFF0000)
+    // this.add.existing(rectangleTest);
+    // this.matter.add.gameObject(rectangleTest,{
+    //   //isStatic:true,
+    //   //friction:1,
+    //   density:.0004
+      
+    // })
+    // this.matter.add.worldConstraint(rectangleTest,0,0.5,{
+    //   pointA: new Phaser.Math.Vector2(rectangleTest.x,rectangleTest.y)
+    // })
+    
+    // let bigBox1 = this.matter.add.image(500,100,'box',0,{mass:2})
+    // let bigBox2 = this.matter.add.image(500,100,'box',0,{mass:2})
+    // this.matter.add.imageStack('box',0,800,200,2,2,10,0,{
+    //   ignoreGravity:true
+    // })
 
-    console.log(rectangleTest)
+    
     
     
     objectLayer.objects.forEach(function (object) {
@@ -101,16 +112,37 @@ class BaseScene extends Phaser.Scene {
         //@ts-ignore
         doorSensor = this.matter.add.rectangle(obj.x + obj.width / 2, obj.y + obj.height / 2, obj.width, obj.height, { isStatic: true, isSensor: true })
       }
-      else if(obj.type === "stackSpawn"){
+      else if(obj.type ==="boxStack"){
         //@ts-ignore
-        objectStack=this.matter.add.imageStack('box',1,obj.x,obj.y,1,3,0,0,{
-          //restitution:1,
-          density:0.0015,
-          ignoreGravity:true,
-          //@ts-ignore
-        })
-        //console.log(objectStack)
+        boxPile = this.matter.add.image(obj.x,obj.y,'box',0,{mass:2})
       }
+      else if(obj.type ==="moviBrig"){
+        //@ts-ignore
+        rectangleTest = this.add.rectangle(obj.x+obj.width/2,obj.y+obj.height/2,obj.width,obj.height, 0xFF0000)
+        //@ts-ignore
+        this.add.existing(rectangleTest);
+        //@ts-ignore
+        this.matter.add.gameObject(rectangleTest,{
+          //isStatic:true,
+          friction:1,
+          density:obj.density
+          //density:.0004
+          
+        })
+        //@ts-ignore
+        this.matter.add.worldConstraint(rectangleTest,0,0.5,{
+          pointA: new Phaser.Math.Vector2(rectangleTest.x,rectangleTest.y)
+        })
+        console.log(obj.density)
+      }
+      // else if(obj.type === "stackSpawn"){
+      //   //@ts-ignore
+      //   objectStack=this.matter.add.imageStack('box',0,obj.x,obj.y,1,2,0,0,{
+      //     density:0.0015,
+      //     ignoreGravity:true,
+      //   })
+      //   //console.log(objectStack)
+      // }
     }, this)
     this.time.addEvent({
       delay: this.emojiInterval,
@@ -152,6 +184,16 @@ class BaseScene extends Phaser.Scene {
         }
       },
       context: this
+    })
+    this.matterCollision.addOnCollideStart({
+      objectA:boxPile,
+      callback:function(eventData){
+        let gameObjectB = eventData.gameObjectB
+        if(gameObjectB instanceof Phaser.Tilemaps.Tile && gameObjectB.properties.isDeadly){
+          console.log('col')
+          boxPile.destroy()
+        }
+      },context:this
     })
     this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels)
     this.cameras.main.startFollow(this.player.sprite, false, 0.5, 0.5)

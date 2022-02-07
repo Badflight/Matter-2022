@@ -1,4 +1,12 @@
 { "compressionlevel":-1,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"json",
+         "target":"slopes2.json"
+        }
+    },
  "height":24,
  "infinite":false,
  "layers":[
@@ -99,7 +107,7 @@
  "nextobjectid":7,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.7.2",
+ "tiledversion":"1.4.3",
  "tileheight":64,
  "tilesets":[
         {
@@ -1067,11 +1075,59 @@
                          "type":"bool",
                          "value":true
                         }]
+                }, 
+                {
+                 "id":289,
+                 "objectgroup":
+                    {
+                     "draworder":"index",
+                     "id":2,
+                     "name":"",
+                     "objects":[
+                            {
+                             "height":64,
+                             "id":1,
+                             "name":"",
+                             "rotation":0,
+                             "type":"",
+                             "visible":true,
+                             "width":64,
+                             "x":0,
+                             "y":0
+                            }, 
+                            {
+                             "height":0,
+                             "id":2,
+                             "name":"",
+                             "rotation":0,
+                             "type":"",
+                             "visible":true,
+                             "width":0,
+                             "x":-36,
+                             "y":-21
+                            }],
+                     "opacity":1,
+                     "type":"objectgroup",
+                     "visible":true,
+                     "x":0,
+                     "y":0
+                    },
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"isDeadly",
+                         "type":"bool",
+                         "value":true
+                        }]
                 }],
          "tilewidth":64
         }],
  "tilewidth":64,
  "type":"map",
- "version":"1.6",
+ "version":1.4,
  "width":8
 }

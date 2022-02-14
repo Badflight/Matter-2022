@@ -55,7 +55,6 @@ class Player {
   handleTouch() {
     const dx = this.touchData.endX - this.touchData.startX
     const dy = this.touchData.endY - this.touchData.startY
-    console.log(dx,dy)
     this.touchData.startX = this.touchData.startY = this.touchData.endX = this.touchData.endY = 0
     const tolerance = 20
     if (dx > tolerance) {
@@ -74,8 +73,9 @@ class Player {
     if(this.isFrozen){
       return
     }
-    const yForce = 0.025
-    const xForce = 0.025
+    //origianlly 0.025
+    const yForce = 0.019
+    const xForce = 0.0125
     if(this.moveRight){
       this.sprite.applyForce({x:xForce,y:0})
     }

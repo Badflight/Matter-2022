@@ -12,7 +12,7 @@ class BaseScene extends Phaser.Scene {
   /**@type {number} */
   emojiCount
   /** @type {number} */
-  emojiInterval = 5000
+  emojiInterval = 1000
   //@ts-ignore
   matterCollision
   constructor(id) {
@@ -39,6 +39,8 @@ class BaseScene extends Phaser.Scene {
       frameHeight: 74
     })
     this.load.image("box","assets/sprites/block.png")
+    this.load.image('fakeFloorR','assets/sprites/fake-floor.png')
+    this.load.image('fakeFloorB','assets/sprites/fake-floor2.png')
   }
   create() {
     this.emojiCount = 0
@@ -54,6 +56,7 @@ class BaseScene extends Phaser.Scene {
     let doorSensor
     let objectStack
     let boxPile
+    let PlayerDeathBox
     // objectStack=this.matter.add.imageStack('box',1,406,300,1,3,0,0,{
     //   //restitution:1,
     //   density:0.0015,
@@ -114,7 +117,8 @@ class BaseScene extends Phaser.Scene {
       }
       else if(obj.type ==="boxStack"){
         //@ts-ignore
-        boxPile = this.matter.add.image(obj.x,obj.y,'box',0,{mass:2})
+        boxPile = this.matter.add.image(obj.x,obj.y,'box',0,{mass:1,density:0.0001})
+        console.log(boxPile)
       }
       else if(obj.type ==="moviBrig"){
         //@ts-ignore
@@ -134,6 +138,20 @@ class BaseScene extends Phaser.Scene {
           pointA: new Phaser.Math.Vector2(rectangleTest.x,rectangleTest.y)
         })
         console.log(obj.density)
+      }
+      else if(obj.type ==="fakeFloor"){
+        //console.log('floor')
+        //@ts-ignore
+        this.matter.add.image(obj.x,obj.y,'fakeFloorR',0,{ignoreGravity:true})
+      }
+      else if(obj.type ==="fakeFloor2"){
+        //console.log('floor')
+        //@ts-ignore
+        this.matter.add.image(obj.x,obj.y,'fakeFloorB',0,{ignoreGravity:true})
+      }
+      else if(obj.type ==="playerDeath"){
+        //@ts-ignore
+        PlayerDeathBox=this.matter.add.rectangle(obj.x+obj.width/2,obj.y+obj.height/2,obj.width,obj.height,{isStatic:true,isSensor:true})
       }
       // else if(obj.type === "stackSpawn"){
       //   //@ts-ignore
@@ -184,6 +202,16 @@ class BaseScene extends Phaser.Scene {
         }
       },
       context: this
+    })
+    this.matterCollision.addOnCollideStart({
+      objectA:this.player.sprite,
+      objectB: PlayerDeathBox,
+      
+      callback:function (evenData){
+        this.player.freeze()
+        this.scene.restart()
+      },
+      context:this
     })
     this.matterCollision.addOnCollideStart({
       objectA:boxPile,

@@ -45,18 +45,6 @@
          "objects":[
                 {
                  "height":0,
-                 "id":1,
-                 "name":"Emoji Spawn",
-                 "point":true,
-                 "rotation":0,
-                 "type":"emojiSpawn",
-                 "visible":true,
-                 "width":0,
-                 "x":96,
-                 "y":416
-                }, 
-                {
-                 "height":0,
                  "id":2,
                  "name":"player",
                  "point":true,
@@ -77,34 +65,6 @@
                  "width":64,
                  "x":8512,
                  "y":153
-                }, 
-                {
-                 "height":32,
-                 "id":5,
-                 "name":"emojiEnd",
-                 "rotation":0,
-                 "type":"emojiDeathRect",
-                 "visible":true,
-                 "width":544,
-                 "x":0,
-                 "y":528
-                }, 
-                {
-                 "height":41,
-                 "id":18,
-                 "name":"bridge",
-                 "properties":[
-                        {
-                         "name":"density",
-                         "type":"float",
-                         "value":0.0004
-                        }],
-                 "rotation":0,
-                 "type":"moviBrig",
-                 "visible":true,
-                 "width":233,
-                 "x":390,
-                 "y":199
                 }, 
                 {
                  "height":41,
@@ -158,30 +118,6 @@
                  "width":0,
                  "x":4477,
                  "y":81
-                }, 
-                {
-                 "height":0,
-                 "id":27,
-                 "name":"fake Floor",
-                 "point":true,
-                 "rotation":0,
-                 "type":"fakeFloor",
-                 "visible":true,
-                 "width":0,
-                 "x":800,
-                 "y":544
-                }, 
-                {
-                 "height":0,
-                 "id":28,
-                 "name":"Emoji Spawn",
-                 "point":true,
-                 "rotation":0,
-                 "type":"emojiSpawn",
-                 "visible":true,
-                 "width":0,
-                 "x":544,
-                 "y":416
                 }],
          "opacity":1,
          "type":"objectgroup",

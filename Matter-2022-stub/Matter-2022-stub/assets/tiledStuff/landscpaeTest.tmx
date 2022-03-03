@@ -382,19 +382,10 @@
 </data>
  </layer>
  <objectgroup id="4" name="objectLayer">
-  <object id="1" name="Emoji Spawn" type="emojiSpawn" x="96" y="416">
-   <point/>
-  </object>
   <object id="2" name="player" type="playerSpawn" x="96" y="640">
    <point/>
   </object>
   <object id="3" name="Exit door" type="exitRect" x="8512" y="153" width="64" height="103"/>
-  <object id="5" name="emojiEnd" type="emojiDeathRect" x="0" y="528" width="544" height="32"/>
-  <object id="18" name="bridge" type="moviBrig" x="390" y="199" width="233" height="41">
-   <properties>
-    <property name="density" type="float" value="0.0004"/>
-   </properties>
-  </object>
   <object id="19" name="BRIGH WITH DENS" type="moviBrig" x="4956.23" y="376.47" width="851.182" height="41">
    <properties>
     <property name="density" type="float" value="0.0002"/>
@@ -407,12 +398,6 @@
    <point/>
   </object>
   <object id="26" name="Box sStack" type="boxStack" x="4477" y="81">
-   <point/>
-  </object>
-  <object id="27" name="fake Floor" type="fakeFloor" x="800" y="544">
-   <point/>
-  </object>
-  <object id="28" name="Emoji Spawn" type="emojiSpawn" x="544" y="416">
    <point/>
   </object>
  </objectgroup>
